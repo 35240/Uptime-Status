@@ -29,33 +29,34 @@
         />
       </button>
     </Transition>
-      <div class="flex flex-col items-center gap-1">
-        <div>
-          <a 
-            :href="pkg.repository.url" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
-          >Uptime-Status</a> Version {{ pkg.version }}
-        </div>
-        <div>
-          基于 <a 
-            href="https://uptimerobot.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
-          >UptimeRobot</a> 接口 | 检测频率 5 分钟
-        </div>
-        <div>
-          <a 
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
-          >
-           浙ICP备2024115105号-6
-          </a>
-        </div>
+
+    <!-- Footer 内容 -->
+    <div class="flex flex-col items-center gap-1">
+      <div>
+        <a 
+          :href="pkg.repository.url" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+        >Uptime-Status</a> Version {{ pkg.version }}
+      </div>
+      <div>
+        基于 <a 
+          href="https://uptimerobot.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+        >UptimeRobot</a> 接口 | 检测频率 5 分钟
+      </div>
+      <div>
+        <a 
+          href="https://beian.miit.gov.cn/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+        >
+          浙ICP备2024115105号-6
+        </a>
       </div>
     </div>
   </footer>
@@ -65,7 +66,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Icon } from '@iconify/vue'
 import pkg from '../../package.json'
-import my_info from '../../my-info.json' 
 
 /**
  * 控制返回顶部按钮的显示
@@ -97,4 +97,4 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
-</script> 
+</script>
